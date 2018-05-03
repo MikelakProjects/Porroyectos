@@ -3,9 +3,14 @@
 <ClassDiagram name="AgendaBack">
   <ClassDiagramComponents>
     <Class name="Contacto" package="" visibility="public" xPosition="656.0" yPosition="421.0">
-      <Fields/>
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+      </Methods>
     </Class>
     <Interface name="ICampo" package="" visibility="public" xPosition="549.0" yPosition="220.0">
       <Methods>
@@ -45,6 +50,11 @@
       <Constructors/>
       <Methods>
         <Method name="getContactos" returnType="ArrayList&lt;Contacto&gt;" visibility="public"/>
+        <Method name="getNombresContactos" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="creaContacto" returnType="void" visibility="public">
+          <Argument type="Contacto" name="contacto"/>
+        </Method>
+        <Method name="eliminarContacto" returnType="void" visibility="public"/>
       </Methods>
     </Class>
   </ClassDiagramComponents>
