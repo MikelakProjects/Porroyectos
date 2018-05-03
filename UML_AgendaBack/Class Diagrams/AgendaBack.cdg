@@ -2,7 +2,7 @@
 
 <ClassDiagram name="AgendaBack">
   <ClassDiagramComponents>
-    <Class name="Contacto" package="" visibility="public" xPosition="549.0" yPosition="417.0">
+    <Class name="Contacto" package="" visibility="public" xPosition="656.0" yPosition="421.0">
       <Fields/>
       <Constructors/>
       <Methods/>
@@ -35,17 +35,25 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Agenda" package="" visibility="public" xPosition="279.0" yPosition="417.0">
+    <Class name="Agenda" package="" visibility="public" xPosition="259.0" yPosition="231.0">
       <Fields/>
       <Constructors/>
       <Methods/>
+    </Class>
+    <Class name="ContactoServices" package="" visibility="public" xPosition="316.0" yPosition="421.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getContactos" returnType="ArrayList&lt;Contacto&gt;" visibility="public"/>
+      </Methods>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <UseRelation name="type" source="ICampo" target="TipoCampo" sourceCardinality="1..1" targetCardinality="1..1"/>
     <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Telephone" target="ICampo"/>
-    <HasRelation name="contactos" source="Agenda" target="Contacto" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <HasRelation name="contactos" source="ContactoServices" target="Contacto" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
     <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Mail" target="ICampo"/>
+    <UseRelation name="contactoServices" source="Agenda" target="ContactoServices" sourceCardinality="1..1" targetCardinality="1..1"/>
     <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Ubication" target="ICampo"/>
     <HasRelation name="campos" source="Contacto" target="ICampo" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
   </ClassDiagramRelations>
