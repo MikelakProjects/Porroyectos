@@ -2,11 +2,51 @@
 
 <ClassDiagram name="AgendaBack">
   <ClassDiagramComponents>
-    <Class name="Contacto" package="" visibility="public" xPosition="120.0" yPosition="76.0">
+    <Class name="Contacto" package="" visibility="public" xPosition="549.0" yPosition="417.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="ICampo" package="" visibility="public" xPosition="549.0" yPosition="220.0">
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getType" returnType="TipoCampo" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Enum name="TipoCampo" package="" visibility="public" xPosition="814.0" yPosition="231.0">
+      <Literals>
+        <Literal name="TELEPHONE"/>
+        <Literal name="MAIL"/>
+        <Literal name="UBICATION"/>
+      </Literals>
+    </Enum>
+    <Class name="Telephone" package="" visibility="public" xPosition="635.0" yPosition="81.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Mail" package="" visibility="public" xPosition="845.0" yPosition="81.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Ubication" package="" visibility="public" xPosition="417.0" yPosition="81.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Agenda" package="" visibility="public" xPosition="279.0" yPosition="417.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
   </ClassDiagramComponents>
-  <ClassDiagramRelations/>
+  <ClassDiagramRelations>
+    <UseRelation name="type" source="ICampo" target="TipoCampo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Telephone" target="ICampo"/>
+    <HasRelation name="contactos" source="Agenda" target="Contacto" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Mail" target="ICampo"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Ubication" target="ICampo"/>
+    <HasRelation name="campos" source="Contacto" target="ICampo" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+  </ClassDiagramRelations>
 </ClassDiagram>
