@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AgendaBack">
+  <ClassDiagramComponents>
+    <Class name="Contacto" package="" visibility="public" xPosition="120.0" yPosition="76.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
